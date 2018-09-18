@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Swithch Theme-->
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#46bdbf</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#dbdbdb</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+
+    <!--floation btn styld-->
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/attendancebackground"
+    tools:context=".StartActivity">
+
+   <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="35dp"
+            android:background="@drawable/fragment_background">
+
+       <TextView
+           android:id="@+id/welcome_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="2dp"
+           android:layout_marginEnd="2dp"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentTop="true"
+           android:fontFamily="@font/nunito_semibold"
+           android:padding="10dp"
+           android:text="@string/welcome_to_attendance_management_app"
+           android:textAlignment="center"
+           android:textColor="@color/colorPrimaryDark"
+           android:textSize="30sp"
+           android:typeface="sans"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <Button
+           android:id="@+id/signin_signin_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="64dp"
+           android:layout_centerInParent="true"
+           android:background="@drawable/primary_color_btn"
+           android:paddingBottom="20dp"
+           android:paddingEnd="15dp"
+           android:paddingStart="15dp"
+           android:paddingTop="20dp"
+           android:text="@string/already_have_an_account"
+           android:textColor="@android:color/white"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/signup_btn" />
+
+       <Button
+           android:id="@+id/signup_btn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="112dp"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/primary_color_btn"
+           android:paddingBottom="20dp"
+           android:paddingEnd="20dp"
+           android:paddingStart="20dp"
+           android:paddingTop="20dp"
+           android:text="@string/don_t_have_account_yet"
+           android:textColor="@android:color/white"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.488"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
+
+        </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

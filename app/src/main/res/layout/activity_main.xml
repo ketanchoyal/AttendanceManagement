@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/attendancebackground"
+    tools:context=".MainActivity">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/fragment_background">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mainprofile_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@mipmap/placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mainenrollmentno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="@string/enrollment_no_loading"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mainuser_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="@string/name"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@id/mainenrollmentno"
+                app:layout_constraintTop_toBottomOf="@+id/mainenrollmentno" />
+
+            <TextView
+                android:id="@+id/mainbranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="64dp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="@string/branch"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/mainuser_name"
+                app:layout_constraintTop_toBottomOf="@+id/mainenrollmentno" />
+
+            <Button
+                android:id="@+id/mainattendance_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="260dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/primary_color_btn"
+                android:paddingBottom="20dp"
+                android:paddingEnd="60dp"
+                android:paddingStart="60dp"
+                android:paddingTop="20dp"
+                android:text="@string/attendance"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/mainattendancehistory_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="352dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/primary_color_btn"
+                android:paddingBottom="20dp"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:paddingTop="20dp"
+                android:text="@string/attendance_history"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/mainlogout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="0dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="10dp"
+                android:text="@string/logout"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.947"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.976" />
+
+        </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

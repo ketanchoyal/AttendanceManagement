@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/attendancebackground"
+    tools:context=".ProfileSetupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_background"
+        android:layout_margin="10dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/fragment_background">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/profile"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toTopOf="@+id/profile_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.32" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/name"
+                    android:focusable="auto"
+                    android:inputType="textPersonName"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_name">
+
+                <EditText
+                    android:id="@+id/birthdatee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/birthdate"
+                    android:inputType="date"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/birthdate">
+
+                <EditText
+                    android:id="@+id/user_mobile_noo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/mobile_no"
+                    android:inputType="number"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_mobile_no">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/admission_yearr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_email">
+
+                <EditText
+                    android:id="@+id/admission_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:focusable="false"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/admission_year"
+                    android:inputType="date"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/update_profile_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/primary_color_btn"
+                android:fontFamily="@font/nunito_semibold"
+                android:padding="15dp"
+                android:text="@string/update_profile"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/admission_yearr" />
+
+            <ImageButton
+                android:id="@+id/home_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_home_black_24dp"
+                android:contentDescription="@string/home" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/attendancebackground"
+    tools:context=".SignupActivity">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="35dp"
+            android:background="@drawable/fragment_background">
+
+
+            <TextView
+                android:id="@+id/signupheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="@string/sign_up"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/nunito_semibold"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_enrollment_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signupheading">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:drawableStart="@mipmap/gtu"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/enrollment_no"
+                    android:inputType="number"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_email_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signup_enrollment_field">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:drawableStart="@mipmap/ic_mail_outline_black_24dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_password_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:textColorHint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signup_email_field">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/edittext_background"
+                    android:drawableStart="@mipmap/ic_lock_black_24dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="20dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:translationY="0dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/signup_signup_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/nunito_semibold"
+                android:padding="18dp"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signup_password_field" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
